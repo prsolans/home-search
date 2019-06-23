@@ -55,7 +55,7 @@ def get_listing_data():
           }
         }
 
-        # craft_message(client, TEXT_BLOCK)
+        craft_message(client, TEXT_BLOCK)
 
       print(listingText)
       
