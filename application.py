@@ -20,8 +20,11 @@ def hello():
     print('FINALLY!!')
     return ('starting...')
 
-# job()
+job()
 # schedule.every().hour.do(job)
+schedule.every().day.at("07:30").do(job)
+schedule.every().day.at("14:30").do(job)
+
 
 if __name__ == '__main__':
     app.run()
