@@ -3,4 +3,5 @@ slackclient
 beautifulsoup4
 requests
 gunicorn
+schedule
 

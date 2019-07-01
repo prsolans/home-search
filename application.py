@@ -19,11 +19,12 @@ def hello():
     # return listings[0]
     return ('starting...')
 
+job();
 schedule.every().hour.do(job)
 
-while True: 
-  
-    # Checks whether a scheduled task  
-    # is pending to run or not 
-    schedule.run_pending() 
-    time.sleep(1) 
+while True:
+
+    # Checks whether a scheduled task
+    # is pending to run or not
+    schedule.run_pending()
+    time.sleep(1)

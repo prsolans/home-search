@@ -18,14 +18,14 @@ def get_listing_data():
       duplicateListings = set(html.find('ul', {'class':'rows'}).findAll('li', {'class': 'duplicate-row'}))
       listings = listings - duplicateListings
 
-      listingsCount = len(listings)
+      # listingsCount = len(listings)
 
       # print(type(listings))
       # print('Count: ')
       # print(listingsCount)
 
-      listingTitles = []
-      listingPrices = []
+      # listingTitles = []
+      # listingPrices = []
       listingText = []
 
       for item in listings:
@@ -36,14 +36,14 @@ def get_listing_data():
         about = item.find('span', {'class': 'housing'}).text
         about = about.replace(' ', '')
         about = about.replace('-', '')
-        
-        text = ( 
+
+        text = (
               title + '\n' +
-              link + '\n' +                
+              link + '\n' +
               price + ' |' +
-              hood + 
+              hood +
               about
-              )                
+              )
 
         listingText.append(text)
 
@@ -58,16 +58,16 @@ def get_listing_data():
         craft_message(client, TEXT_BLOCK)
 
       print(listingText)
-      
-      listingDetails = []
 
-      for i in range(0, listingsCount): 
-        break
+      # listingDetails = []
+
+      # for i in range(0, listingsCount):
+      #   break
         # print('TITLE: ' + listingTitles[i].text)
         # print('PRICE: ' + listingPrices[i].text)
 
-      message = 'Count: ' + str(listingsCount)
-      
+      # message = 'Count: ' + str(listingsCount)
+
       return listingText
 
   except Error as e:
@@ -80,7 +80,7 @@ def craft_message(client, TEXT_BLOCK):
     text = '['+str(TEXT_BLOCK)+']'
     print(text)
 
-    response = client.chat_postMessage(
+    client.chat_postMessage(
             channel='#housing',
             icon_emoji=":house_buildings:",
             blocks= text
