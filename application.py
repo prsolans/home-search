@@ -20,12 +20,13 @@ def hello():
     print('FINALLY!!')
     return ('starting...')
 
-job()
-schedule.every().hour.do(job)
+# job()
+# schedule.every().hour.do(job)
 
 while True:
 
     # Checks whether a scheduled task
     # is pending to run or not
+    app.run()
     schedule.run_pending()
     time.sleep(1)
