@@ -19,7 +19,7 @@ def hello():
     # return listings[0]
     return ('starting...')
 
-job();
+job()
 schedule.every().hour.do(job)
 
 while True:
