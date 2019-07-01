@@ -23,10 +23,5 @@ def hello():
 # job()
 # schedule.every().hour.do(job)
 
-while True:
-
-    # Checks whether a scheduled task
-    # is pending to run or not
+if __name__ == '__main__':
     app.run()
-    schedule.run_pending()
-    time.sleep(1)
