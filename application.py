@@ -17,6 +17,7 @@ def job():
 def hello():
     # listings = get_listing_data()
     # return listings[0]
+    print('FINALLY!!')
     return ('starting...')
 
 job()
